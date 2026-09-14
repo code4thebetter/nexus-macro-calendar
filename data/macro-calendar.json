@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-01-07",
+    "date": "2025-01-07",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-01-10",
+    "date": "2025-01-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-01-14",
+    "date": "2025-01-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-01-15",
+    "date": "2025-01-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-01-16",
+    "date": "2025-01-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-02-04",
+    "date": "2025-02-04",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-02-07",
+    "date": "2025-02-07",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-02-12",
+    "date": "2025-02-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-02-13",
+    "date": "2025-02-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-02-14",
+    "date": "2025-02-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-03-07",
+    "date": "2025-03-07",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-03-11",
+    "date": "2025-03-11",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-03-12",
+    "date": "2025-03-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-03-13",
+    "date": "2025-03-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-03-18",
+    "date": "2025-03-18",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-03-20",
+    "date": "2025-03-20",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-04-01",
+    "date": "2025-04-01",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-04-04",
+    "date": "2025-04-04",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-04-10",
+    "date": "2025-04-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-04-11",
+    "date": "2025-04-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-04-15",
+    "date": "2025-04-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-04-29",
+    "date": "2025-04-29",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-05-02",
+    "date": "2025-05-02",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-05-13",
+    "date": "2025-05-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-05-15",
+    "date": "2025-05-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-05-16",
+    "date": "2025-05-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-06-03",
+    "date": "2025-06-03",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-06-06",
+    "date": "2025-06-06",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-06-11",
+    "date": "2025-06-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-06-12",
+    "date": "2025-06-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-06-17",
+    "date": "2025-06-17",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-07-01",
+    "date": "2025-07-01",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-07-03",
+    "date": "2025-07-03",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-07-15",
+    "date": "2025-07-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-07-16",
+    "date": "2025-07-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-07-17",
+    "date": "2025-07-17",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-07-29",
+    "date": "2025-07-29",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-08-01",
+    "date": "2025-08-01",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-08-12",
+    "date": "2025-08-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-08-14",
+    "date": "2025-08-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-08-15",
+    "date": "2025-08-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-09-03",
+    "date": "2025-09-03",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-09-05",
+    "date": "2025-09-05",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-09-10",
+    "date": "2025-09-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-09-11",
+    "date": "2025-09-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-09-16",
+    "date": "2025-09-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-09-30",
+    "date": "2025-09-30",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-10-24",
+    "date": "2025-10-24",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-11-20",
+    "date": "2025-11-20",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2025-11-25",
+    "date": "2025-11-25",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2025-12-03",
+    "date": "2025-12-03",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2025-12-09",
+    "date": "2025-12-09",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2025-12-16",
+    "date": "2025-12-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2025-12-18",
+    "date": "2025-12-18",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-01-07",
+    "date": "2026-01-07",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-01-09",
+    "date": "2026-01-09",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-01-13",
+    "date": "2026-01-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-01-14",
+    "date": "2026-01-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-01-15",
+    "date": "2026-01-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-01-28",
+    "date": "2026-01-28",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-01-30",
+    "date": "2026-01-30",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-02-05",
+    "date": "2026-02-05",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-02-10",
+    "date": "2026-02-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-02-11",
+    "date": "2026-02-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-02-13",
+    "date": "2026-02-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-02-27",
+    "date": "2026-02-27",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-03-05",
+    "date": "2026-03-05",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-03-06",
+    "date": "2026-03-06",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-03-11",
+    "date": "2026-03-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-03-13",
+    "date": "2026-03-13",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-03-18",
+    "date": "2026-03-18",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-03-18",
+    "date": "2026-03-18",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-03-25",
+    "date": "2026-03-25",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-03-31",
+    "date": "2026-03-31",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-04-03",
+    "date": "2026-04-03",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-04-10",
+    "date": "2026-04-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-04-14",
+    "date": "2026-04-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-04-15",
+    "date": "2026-04-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-04-28",
+    "date": "2026-04-28",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "FOMC-2026-04-29",
+    "date": "2026-04-29",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-05-05",
+    "date": "2026-05-05",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-05-08",
+    "date": "2026-05-08",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-05-12",
+    "date": "2026-05-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-05-13",
+    "date": "2026-05-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-05-14",
+    "date": "2026-05-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-06-02",
+    "date": "2026-06-02",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-06-05",
+    "date": "2026-06-05",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-06-10",
+    "date": "2026-06-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-06-11",
+    "date": "2026-06-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-06-16",
+    "date": "2026-06-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-06-17",
+    "date": "2026-06-17",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-06-30",
+    "date": "2026-06-30",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-07-02",
+    "date": "2026-07-02",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-07-14",
+    "date": "2026-07-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-07-15",
+    "date": "2026-07-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-07-17",
+    "date": "2026-07-17",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-07-29",
+    "date": "2026-07-29",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-08-04",
+    "date": "2026-08-04",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-08-07",
+    "date": "2026-08-07",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-08-12",
+    "date": "2026-08-12",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-08-13",
+    "date": "2026-08-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-08-18",
+    "date": "2026-08-18",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-09-01",
+    "date": "2026-09-01",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-09-04",
+    "date": "2026-09-04",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-09-10",
+    "date": "2026-09-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-09-11",
+    "date": "2026-09-11",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-09-16",
+    "date": "2026-09-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-09-16",
+    "date": "2026-09-16",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-09-29",
+    "date": "2026-09-29",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-GDP-THIRD-ESTIMATE-2026-09-30",
+    "date": "2026-09-30",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "GDP Third Estimate",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-10-02",
+    "date": "2026-10-02",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-10-06",
+    "date": "2026-10-06",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-10-14",
+    "date": "2026-10-14",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-10-15",
+    "date": "2026-10-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-10-16",
+    "date": "2026-10-16",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "FOMC-2026-10-28",
+    "date": "2026-10-28",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BEA-GDP-ADVANCE-ESTIMATE-2026-10-29",
+    "date": "2026-10-29",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "GDP Advance Estimate",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-11-03",
+    "date": "2026-11-03",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-11-04",
+    "date": "2026-11-04",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-11-06",
+    "date": "2026-11-06",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-11-10",
+    "date": "2026-11-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-11-13",
+    "date": "2026-11-13",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-11-17",
+    "date": "2026-11-17",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-GDP-SECOND-ESTIMATE-2026-11-25",
+    "date": "2026-11-25",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "GDP Second Estimate",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-12-01",
+    "date": "2026-12-01",
+    "timeET": "10:00",
+    "source": "BLS",
+    "event": "Job Openings and Labor Turnover Survey",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-12-02",
+    "date": "2026-12-02",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-EMPLOYMENT-SITUATION-2026-12-04",
+    "date": "2026-12-04",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Employment Situation",
+    "severity": "HIGH"
+  },
+  {
+    "id": "FOMC-2026-12-09",
+    "date": "2026-12-09",
+    "timeET": "14:00",
+    "source": "FED",
+    "event": "FOMC Decision",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-CONSUMER-PRICE-INDEX-2026-12-10",
+    "date": "2026-12-10",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Consumer Price Index",
+    "severity": "HIGH"
+  },
+  {
+    "id": "BLS-PRODUCER-PRICE-INDEX-2026-12-15",
+    "date": "2026-12-15",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "Producer Price Index",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BLS-U-S-IMPORT-AND-EXPORT-PRICE-INDEXES-2026-12-17",
+    "date": "2026-12-17",
+    "timeET": "08:30",
+    "source": "BLS",
+    "event": "U.S. Import and Export Price Indexes",
+    "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-GDP-THIRD-ESTIMATE-2026-12-23",
+    "date": "2026-12-23",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "GDP Third Estimate",
+    "severity": "MEDIUM"
+  }
+]

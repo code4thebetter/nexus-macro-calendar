@@ -1,41 +1,60 @@
+import { pathToFileURL } from "node:url";
+
 const FED_URL =
   "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm";
 
 const MONTHS = {
-  January: 1,
-  February: 2,
-  March: 3,
-  April: 4,
-  May: 5,
-  June: 6,
-  July: 7,
-  August: 8,
-  September: 9,
-  October: 10,
-  November: 11,
-  December: 12
+  January: "01",
+  February: "02",
+  March: "03",
+  April: "04",
+  May: "05",
+  June: "06",
+  July: "07",
+  August: "08",
+  September: "09",
+  October: "10",
+  November: "11",
+  December: "12"
 };
 
-function fail(message) {
-  console.error("FED PARSER : FAILED");
-  console.error(message);
-  process.exit(1);
-}
-
-function stripHtml(html) {
+function normalizeHtml(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, "\n")
     .replace(/&nbsp;/gi, " ")
     .replace(/&amp;/gi, "&")
-    .replace(/\r/g, "")
-    .split("\n")
+    .replace(/&#039;/gi, "'")
+    .replace(/&quot;/gi, '"')
+    .split(/\r?\n/)
     .map(x => x.trim())
     .filter(Boolean);
 }
 
-try {
+function parseMeetingDate(monthName, dateText) {
+  const month = MONTHS[monthName];
+
+  if (!month) {
+    throw new Error(`Unknown FED month: ${monthName}`);
+  }
+
+  const numbers = [...dateText.matchAll(/\d{1,2}/g)]
+    .map(x => Number(x[0]));
+
+  if (numbers.length === 0) {
+    throw new Error(
+      `Could not parse FED meeting date: ${monthName} ${dateText}`
+    );
+  }
+
+  // FOMC decision occurs on final day of meeting range.
+  const day = numbers[numbers.length - 1];
+
+  return `2026-${month}-${String(day).padStart(2, "0")}`;
+}
+
+export async function collectFedEvents() {
   const response = await fetch(FED_URL, {
     headers: {
       "User-Agent": "NEXUS-Macro-Calendar/1.0"
@@ -43,49 +62,52 @@ try {
   });
 
   if (!response.ok) {
-    fail(`Federal Reserve returned HTTP ${response.status}`);
+    throw new Error(
+      `FED returned HTTP ${response.status}`
+    );
   }
 
   const html = await response.text();
-  const lines = stripHtml(html);
+  const lines = normalizeHtml(html);
 
   const start = lines.findIndex(
-    x => x.includes("2026 FOMC Meetings")
+    x => /2026 FOMC Meetings/i.test(x)
   );
-
-  if (start === -1) {
-    fail("2026 FOMC section not found.");
-  }
 
   const end = lines.findIndex(
     (x, i) =>
       i > start &&
-      x.includes("2025 FOMC Meetings")
+      /2025 FOMC Meetings/i.test(x)
   );
 
-  if (end === -1) {
-    fail("Could not determine end of 2026 FOMC section.");
+  if (start < 0 || end < 0 || end <= start) {
+    throw new Error(
+      "Could not isolate 2026 FOMC Meetings section."
+    );
   }
 
-  const section = lines.slice(start + 1, end);
-
-  const meetings = [];
+  const section = lines.slice(start, end);
+  const events = [];
 
   for (let i = 0; i < section.length; i++) {
-    const monthName = section[i];
+    const monthName = Object.keys(MONTHS)
+      .find(month =>
+        new RegExp(`^${month}\\b`, "i")
+          .test(section[i])
+      );
 
-    if (!(monthName in MONTHS)) {
+    if (!monthName) {
       continue;
     }
 
     let dateText = null;
 
     for (
-      let j = i + 1;
-      j < Math.min(i + 5, section.length);
+      let j = i;
+      j < Math.min(section.length, i + 6);
       j++
     ) {
-      if (/^\d{1,2}(?:-\d{1,2})?\*?$/.test(section[j])) {
+      if (/\d{1,2}/.test(section[j])) {
         dateText = section[j];
         break;
       }
@@ -95,53 +117,78 @@ try {
       continue;
     }
 
-    const clean = dateText.replace("*", "");
-    const parts = clean.split("-");
-
-    const decisionDay =
-      Number(parts.length === 2 ? parts[1] : parts[0]);
+    const date = parseMeetingDate(
+      monthName,
+      dateText
+    );
 
     if (
-      !Number.isInteger(decisionDay) ||
-      decisionDay < 1 ||
-      decisionDay > 31
+      !events.some(x => x.date === date)
     ) {
-      fail(`Invalid FOMC date parsed for ${monthName}: ${dateText}`);
+      events.push({
+        id: `FOMC-${date}`,
+        date,
+        timeET: "14:00",
+        source: "FED",
+        event: "FOMC Decision",
+        severity: "HIGH"
+      });
     }
-
-    const month = MONTHS[monthName];
-
-    const date =
-      `2026-${String(month).padStart(2, "0")}-${String(decisionDay).padStart(2, "0")}`;
-
-    meetings.push({
-      id: `FOMC-${date}`,
-      date,
-      timeET: "14:00",
-      source: "FED",
-      event: "FOMC Decision",
-      severity: "HIGH"
-    });
   }
 
-  if (meetings.length !== 8) {
-    fail(
-      `Expected 8 scheduled 2026 FOMC meetings, parsed ${meetings.length}.`
+  events.sort((a, b) =>
+    `${a.date} ${a.timeET}`.localeCompare(
+      `${b.date} ${b.timeET}`
+    )
+  );
+
+  if (events.length !== 8) {
+    throw new Error(
+      `Expected 8 FOMC meetings for 2026, found ${events.length}`
     );
   }
 
-  const uniqueDates = new Set(meetings.map(x => x.date));
+  const duplicateIds = events
+    .map(x => x.id)
+    .filter(
+      (id, index, all) =>
+        all.indexOf(id) !== index
+    );
 
-  if (uniqueDates.size !== meetings.length) {
-    fail("Duplicate FOMC meeting dates detected.");
+  if (duplicateIds.length > 0) {
+    throw new Error(
+      `Duplicate FED event IDs: ${duplicateIds.join(", ")}`
+    );
   }
 
-  console.log("FED PARSER : PASS");
-  console.log("2026 meetings :", meetings.length);
-  console.log("");
-
-  console.table(meetings);
+  return events;
 }
-catch (error) {
-  fail(error.message);
+
+async function runStandalone() {
+  try {
+    const events = await collectFedEvents();
+
+    console.log("FED PARSER : PASS");
+    console.log(
+      "2026 meetings :",
+      events.length
+    );
+    console.log("");
+
+    console.table(events);
+  }
+  catch (error) {
+    console.error("FED PARSER : FAILED");
+    console.error(error.message);
+    process.exit(1);
+  }
+}
+
+const isStandalone =
+  process.argv[1] &&
+  import.meta.url ===
+    pathToFileURL(process.argv[1]).href;
+
+if (isStandalone) {
+  await runStandalone();
 }

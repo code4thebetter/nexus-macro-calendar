@@ -1,3 +1,5 @@
+import { pathToFileURL } from "node:url";
+
 const BEA_URL =
   "https://www.bea.gov/news/schedule";
 
@@ -15,12 +17,6 @@ const MONTHS = {
   November: "11",
   December: "12"
 };
-
-function fail(message) {
-  console.error("BEA PARSER : FAILED");
-  console.error(message);
-  process.exit(1);
-}
 
 function normalizeHtml(html) {
   return html
@@ -111,7 +107,7 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-try {
+export async function collectBeaEvents() {
   const response = await fetch(BEA_URL, {
     headers: {
       "User-Agent": "NEXUS-Macro-Calendar/1.0"
@@ -119,7 +115,9 @@ try {
   });
 
   if (!response.ok) {
-    fail(`BEA returned HTTP ${response.status}`);
+    throw new Error(
+      `BEA returned HTTP ${response.status}`
+    );
   }
 
   const html = await response.text();
@@ -128,7 +126,8 @@ try {
   const events = [];
 
   for (let i = 0; i < lines.length; i++) {
-    const classification = classify(lines[i]);
+    const classification =
+      classify(lines[i]);
 
     if (!classification) {
       continue;
@@ -138,9 +137,13 @@ try {
     const timeText = lines[i + 2];
 
     if (!dateText || !timeText) {
-      fail(`Missing date/time after '${lines[i]}'`);
+      throw new Error(
+        `Missing date/time after '${lines[i]}'`
+      );
     }
 
+    // BEA sometimes publishes a release before
+    // assigning its exact date/time.
     if (/To Be Announced/i.test(dateText)) {
       continue;
     }
@@ -149,19 +152,20 @@ try {
     const timeET = parseTime(timeText);
 
     if (!date) {
-      fail(
+      throw new Error(
         `Could not parse BEA date '${dateText}' for '${lines[i]}'`
       );
     }
 
     if (!timeET) {
-      fail(
+      throw new Error(
         `Could not parse BEA time '${timeText}' for '${lines[i]}'`
       );
     }
 
     events.push({
-      id: `BEA-${slugify(classification.event)}-${date}`,
+      id:
+        `BEA-${slugify(classification.event)}-${date}`,
       date,
       timeET,
       source: "BEA",
@@ -171,18 +175,21 @@ try {
   }
 
   if (events.length === 0) {
-    fail("No NEXUS-relevant BEA events parsed.");
+    throw new Error(
+      "No NEXUS-relevant BEA events parsed."
+    );
   }
 
-  const duplicates = events
+  const duplicateIds = events
     .map(x => x.id)
-    .filter((id, index, all) =>
-      all.indexOf(id) !== index
+    .filter(
+      (id, index, all) =>
+        all.indexOf(id) !== index
     );
 
-  if (duplicates.length > 0) {
-    fail(
-      `Duplicate BEA event IDs: ${duplicates.join(", ")}`
+  if (duplicateIds.length > 0) {
+    throw new Error(
+      `Duplicate BEA event IDs: ${duplicateIds.join(", ")}`
     );
   }
 
@@ -192,12 +199,35 @@ try {
     )
   );
 
-  console.log("BEA PARSER : PASS");
-  console.log("NEXUS BEA events :", events.length);
-  console.log("");
-
-  console.table(events);
+  return events;
 }
-catch (error) {
-  fail(error.message);
+
+async function runStandalone() {
+  try {
+    const events =
+      await collectBeaEvents();
+
+    console.log("BEA PARSER : PASS");
+    console.log(
+      "NEXUS BEA events :",
+      events.length
+    );
+    console.log("");
+
+    console.table(events);
+  }
+  catch (error) {
+    console.error("BEA PARSER : FAILED");
+    console.error(error.message);
+    process.exit(1);
+  }
+}
+
+const isStandalone =
+  process.argv[1] &&
+  import.meta.url ===
+    pathToFileURL(process.argv[1]).href;
+
+if (isStandalone) {
+  await runStandalone();
 }
