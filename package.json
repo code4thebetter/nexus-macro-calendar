@@ -1,0 +1,13 @@
+{
+  "name": "nexus-macro-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official macroeconomic calendar collector for NEXUS",
+  "type": "module",
+  "scripts": {
+    "collect": "node src/collector.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
