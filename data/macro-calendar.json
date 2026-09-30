@@ -872,27 +872,11 @@
     "severity": "MEDIUM"
   },
   {
-    "id": "BEA-GDP-THIRD-ESTIMATE-2026-09-30",
-    "date": "2026-09-30",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "GDP Third Estimate",
-    "severity": "MEDIUM"
-  },
-  {
     "id": "BLS-EMPLOYMENT-SITUATION-2026-10-02",
     "date": "2026-10-02",
     "timeET": "08:30",
     "source": "BLS",
     "event": "Employment Situation",
-    "severity": "HIGH"
-  },
-  {
-    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-10-06",
-    "date": "2026-10-06",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "Personal Income and Outlays",
     "severity": "HIGH"
   },
   {
