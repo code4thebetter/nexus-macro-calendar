@@ -54,8 +54,8 @@ function parseMeetingDate(monthName, dateText) {
   return `2026-${month}-${String(day).padStart(2, "0")}`;
 }
 
-export async function collectFedEvents() {
-  const response = await fetch(FED_URL, {
+export async function collectFedEvents(fetcher = fetch) {
+  const response = await fetcher(FED_URL, {
     headers: {
       "User-Agent": "NEXUS-Macro-Calendar/1.0"
     }

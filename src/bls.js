@@ -84,8 +84,8 @@ function classify(summary) {
   return null;
 }
 
-export async function collectBlsEvents() {
-  const response = await fetch(BLS_ICS_URL, {
+export async function collectBlsEvents(fetcher = fetch) {
+  const response = await fetcher(BLS_ICS_URL, {
     headers: {
       "User-Agent": "NEXUS-Macro-Calendar/1.0"
     }

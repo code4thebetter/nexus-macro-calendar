@@ -32,7 +32,7 @@ function normalizeHtml(html) {
     .filter(Boolean);
 }
 
-function parseDate(dateText) {
+function parseDate(dateText, year) {
   const match = dateText.match(
     /^(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})$/
   );
@@ -41,7 +41,10 @@ function parseDate(dateText) {
     return null;
   }
 
-  return `2026-${MONTHS[match[1]]}-${String(match[2]).padStart(2, "0")}`;
+  const date = `${year}-${MONTHS[match[1]]}-${String(match[2]).padStart(2, "0")}`;
+  const parsed = new Date(`${date}T00:00:00Z`);
+  return Number.isFinite(parsed.getTime()) &&
+    parsed.toISOString().slice(0, 10) === date ? date : null;
 }
 
 function parseTime(timeText) {
@@ -56,6 +59,10 @@ function parseTime(timeText) {
   let hour = Number(match[1]);
   const minute = match[2];
   const suffix = match[3].toUpperCase();
+
+  if (hour < 1 || hour > 12 || Number(minute) > 59) {
+    return null;
+  }
 
   if (suffix === "PM" && hour !== 12) {
     hour += 12;
@@ -107,8 +114,8 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-export async function collectBeaEvents() {
-  const response = await fetch(BEA_URL, {
+export async function collectBeaEvents(fetcher = fetch) {
+  const response = await fetcher(BEA_URL, {
     headers: {
       "User-Agent": "NEXUS-Macro-Calendar/1.0"
     }
@@ -121,45 +128,78 @@ export async function collectBeaEvents() {
   }
 
   const html = await response.text();
-  const lines = normalizeHtml(html);
+  return parseBeaEvents(html);
+}
+
+function cellsWithClass(row, className) {
+  return [...row.matchAll(/<td\b([^>]*)>([\s\S]*?)<\/td>/gi)]
+    .filter(([, attributes]) => {
+      const classes = attributes.match(/\bclass\s*=\s*(["'])(.*?)\1/i);
+      return classes && classes[2].split(/\s+/).includes(className);
+    })
+    .map(([, , content]) => normalizeHtml(content));
+}
+
+export function parseBeaEvents(html) {
+  // Date/time precede the title in BEA's table. Keep each release within
+  // its own row so a following release or navigation cannot supply its date.
+  const tables = [...html.matchAll(/<table\b([^>]*)>([\s\S]*?)<\/table>/gi)]
+    .filter(([, attributes]) => /\bid\s*=\s*(["'])release-schedule-table\1/i.test(attributes));
+  if (tables.length !== 1) {
+    throw new Error("Expected one BEA release schedule table.");
+  }
+  const table = tables[0][2];
+  const header = table.match(/<thead\b[^>]*>([\s\S]*?)<\/thead>/i);
+  const years = normalizeHtml(header?.[1] ?? "").join(" ").match(/\bYear\s+(20\d{2})\b/g);
+  if (years?.length !== 1) {
+    throw new Error("Missing or ambiguous BEA schedule year.");
+  }
+  const year = years[0].match(/20\d{2}/)[0];
+  const body = table.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i);
+  if (!body) {
+    throw new Error("Missing BEA schedule body.");
+  }
 
   const events = [];
 
-  for (let i = 0; i < lines.length; i++) {
+  for (const [, row] of body[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+    const titles = cellsWithClass(row, "release-title");
+    const title = titles[0]?.join(" ");
     const classification =
-      classify(lines[i]);
+      classify(title ?? normalizeHtml(row).join(" "));
 
     if (!classification) {
       continue;
     }
 
-    const dateText = lines[i + 1];
-    const timeText = lines[i + 2];
-
-    if (!dateText || !timeText) {
-      throw new Error(
-        `Missing date/time after '${lines[i]}'`
-      );
+    const dates = cellsWithClass(row, "scheduled-date");
+    if (titles.length !== 1 || dates.length !== 1) {
+      throw new Error(`Missing or ambiguous BEA schedule cells for '${title ?? "release"}'`);
     }
+    const [dateText, timeText] = dates[0];
 
     // BEA sometimes publishes a release before
     // assigning its exact date/time.
-    if (/To Be Announced/i.test(dateText)) {
+    if (/^To Be Announced$/i.test(dateText ?? "")) {
       continue;
     }
 
-    const date = parseDate(dateText);
+    if (!dateText || !timeText || dates[0].length !== 2) {
+      throw new Error(`Missing or ambiguous BEA date/time for '${title}'`);
+    }
+
+    const date = parseDate(dateText, year);
     const timeET = parseTime(timeText);
 
     if (!date) {
       throw new Error(
-        `Could not parse BEA date '${dateText}' for '${lines[i]}'`
+        `Could not parse BEA date '${dateText}' for '${title}'`
       );
     }
 
     if (!timeET) {
       throw new Error(
-        `Could not parse BEA time '${timeText}' for '${lines[i]}'`
+        `Could not parse BEA time '${timeText}' for '${title}'`
       );
     }
 

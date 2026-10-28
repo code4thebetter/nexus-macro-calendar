@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { collectSnapshot } from "./refresh.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -127,92 +128,11 @@ function sortEvents(events) {
 }
 
 async function main() {
-  console.log(
-    "NEXUS Macro Collector : START"
-  );
-
-  const fedEvents =
-    await collectFedEvents();
-
-  console.log(
-    "FED events :",
-    fedEvents.length
-  );
-
-  const blsResult =
-    await collectBlsEvents();
-
-  console.log(
-    "BLS events :",
-    blsResult.events.length,
-    `(raw ${blsResult.rawCount})`
-  );
-
-  const beaEvents =
-    await collectBeaEvents();
-
-  console.log(
-    "BEA events :",
-    beaEvents.length
-  );
-
-  const merged = sortEvents([
-    ...fedEvents,
-    ...blsResult.events,
-    ...beaEvents
-  ]);
-
-  validateCalendar(merged);
-
-  const outputDir =
-    path.dirname(OUTPUT_PATH);
-
-  fs.mkdirSync(
-    outputDir,
-    { recursive: true }
-  );
-
-  const tempPath =
-    `${OUTPUT_PATH}.tmp`;
-
-  fs.writeFileSync(
-    tempPath,
-    JSON.stringify(merged, null, 2) + "\n",
-    "utf8"
-  );
-
-  // Re-parse temp file before replacing live output.
-  const verify =
-    JSON.parse(
-      fs.readFileSync(
-        tempPath,
-        "utf8"
-      )
-    );
-
-  validateCalendar(verify);
-
-  fs.renameSync(
-    tempPath,
-    OUTPUT_PATH
-  );
-
-  console.log("");
-  console.log(
-    "Merged events :",
-    merged.length
-  );
-
-  console.log(
-    "Output        :",
-    OUTPUT_PATH
-  );
-
-  console.log(
-    "NEXUS Macro Collector : PASS"
-  );
+  const run = { id: process.env.GITHUB_RUN_ID ?? null, attempt: process.env.GITHUB_RUN_ATTEMPT ?? null, source_commit: process.env.GITHUB_SHA ?? null };
+  const snapshot = await collectSnapshot({collectFed: collectFedEvents, collectBls: collectBlsEvents, collectBea: collectBeaEvents, validate: validateCalendar, sort: sortEvents, output: OUTPUT_PATH, run});
+  console.log('NEXUS Macro Collector : PASS');
+  console.log('Merged events :', snapshot.events.length);
 }
-
 main().catch(error => {
   console.error("");
   console.error(

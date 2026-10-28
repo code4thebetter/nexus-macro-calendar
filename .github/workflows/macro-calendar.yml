@@ -9,58 +9,42 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: nexus-macro-calendar-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh-calendar:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-
+      - name: Test calendar parsers and refresh receipts
+        run: npm test
       - name: Run NEXUS macro collector
+        id: collect
         run: npm run collect
-
-      - name: Validate generated calendar
+      # Publish failure receipts too. A failed collector still fails the workflow.
+      - name: Commit calendar and refresh evidence
+        if: ${{ always() && steps.collect.outcome != 'skipped' }}
         run: |
-          node -e "
-          const fs = require('fs');
-          const data = JSON.parse(
-            fs.readFileSync('data/macro-calendar.json', 'utf8')
-          );
-
-          if (!Array.isArray(data) || data.length === 0) {
-            throw new Error('Calendar is empty');
-          }
-
-          const sources = new Set(data.map(x => x.source));
-
-          for (const source of ['FED', 'BLS', 'BEA']) {
-            if (!sources.has(source)) {
-              throw new Error('Missing source: ' + source);
-            }
-          }
-
-          console.log('CALENDAR VALIDATION : PASS');
-          console.log('Events:', data.length);
-          console.log('Sources:', [...sources].sort().join(', '));
-          "
-
-      - name: Commit calendar changes
-        run: |
-          if git diff --quiet -- data/macro-calendar.json; then
-            echo "No calendar changes."
-            exit 0
-          fi
-
+          node --input-type=module -e '
+          import fs from "node:fs";
+          const r=JSON.parse(fs.readFileSync("data/macro-calendar-refresh.json","utf8"));
+          if(r.run.id!==process.env.GITHUB_RUN_ID || r.run.attempt!==process.env.GITHUB_RUN_ATTEMPT) throw Error("CURRENT_RUN_RECEIPT_REQUIRED");
+          '
           git config user.name "NEXUS Macro Bot"
           git config user.email "nexus-macro-bot@users.noreply.github.com"
-
-          git add data/macro-calendar.json
-          git commit -m "Auto-update macro calendar"
+          for file in data/macro-calendar.json data/macro-calendar-snapshot.json data/macro-calendar-refresh.json; do
+            if [ -f "$file" ]; then git add -- "$file"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No calendar evidence changes."
+            exit 0
+          fi
+          git commit -m "Record macro calendar refresh ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
           git push
-

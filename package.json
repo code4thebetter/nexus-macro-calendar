@@ -5,7 +5,8 @@
   "description": "Official macroeconomic calendar collector for NEXUS",
   "type": "module",
   "scripts": {
-    "collect": "node src/collector.js"
+    "collect": "node src/collector.js",
+    "test": "node --test test/*.test.js"
   },
   "engines": {
     "node": ">=22"
