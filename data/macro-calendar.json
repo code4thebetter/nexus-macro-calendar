@@ -920,20 +920,20 @@
     "severity": "HIGH"
   },
   {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-10-29",
+    "date": "2026-10-29",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
+  },
+  {
     "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-11-03",
     "date": "2026-11-03",
     "timeET": "10:00",
     "source": "BLS",
     "event": "Job Openings and Labor Turnover Survey",
     "severity": "MEDIUM"
-  },
-  {
-    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-11-04",
-    "date": "2026-11-04",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "Personal Income and Outlays",
-    "severity": "HIGH"
   },
   {
     "id": "BLS-EMPLOYMENT-SITUATION-2026-11-06",
@@ -976,20 +976,20 @@
     "severity": "MEDIUM"
   },
   {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-11-25",
+    "date": "2026-11-25",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
+  },
+  {
     "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-12-01",
     "date": "2026-12-01",
     "timeET": "10:00",
     "source": "BLS",
     "event": "Job Openings and Labor Turnover Survey",
     "severity": "MEDIUM"
-  },
-  {
-    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-12-02",
-    "date": "2026-12-02",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "Personal Income and Outlays",
-    "severity": "HIGH"
   },
   {
     "id": "BLS-EMPLOYMENT-SITUATION-2026-12-04",
@@ -1038,5 +1038,13 @@
     "source": "BEA",
     "event": "GDP Third Estimate",
     "severity": "MEDIUM"
+  },
+  {
+    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-12-23",
+    "date": "2026-12-23",
+    "timeET": "08:30",
+    "source": "BEA",
+    "event": "Personal Income and Outlays",
+    "severity": "HIGH"
   }
 ]
