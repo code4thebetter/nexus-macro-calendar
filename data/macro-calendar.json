@@ -912,22 +912,6 @@
     "severity": "HIGH"
   },
   {
-    "id": "BEA-GDP-ADVANCE-ESTIMATE-2026-10-29",
-    "date": "2026-10-29",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "GDP Advance Estimate",
-    "severity": "HIGH"
-  },
-  {
-    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-10-29",
-    "date": "2026-10-29",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "Personal Income and Outlays",
-    "severity": "HIGH"
-  },
-  {
     "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-11-03",
     "date": "2026-11-03",
     "timeET": "10:00",

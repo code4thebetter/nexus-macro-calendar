@@ -1,14 +1,14 @@
 {
   "schema": "NEXUS_MACRO_CALENDAR_REFRESH_1",
   "status": "SUCCESS",
-  "started_at": "2026-10-28T23:16:13.369Z",
-  "completed_at": "2026-10-28T23:16:14.619Z",
+  "started_at": "2026-10-29T14:22:15.042Z",
+  "completed_at": "2026-10-29T14:22:16.011Z",
   "run": {
-    "id": "40786136101",
+    "id": "40890761736",
     "attempt": "1",
-    "source_commit": "82325cdc5be5342180bd7bc66741d424b0740237"
+    "source_commit": "7b5b914541d5dc7335888105e3b86854599c6afb"
   },
-  "scope_day": "2026-10-28",
+  "scope_day": "2026-10-29",
   "timezone": "America/New_York",
   "sources": {
     "FED": {
@@ -22,27 +22,27 @@
     },
     "BEA": {
       "status": "PASS",
-      "events": 6
+      "events": 4
     }
   },
   "source_checks": [
     {
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-      "started_at": "2026-10-28T23:16:13.384Z",
-      "collected_at": "2026-10-28T23:16:13.593Z",
+      "started_at": "2026-10-29T14:22:15.056Z",
+      "collected_at": "2026-10-29T14:22:15.262Z",
       "status": 200,
-      "body_sha256": "92E3A2DBD833245EA53F49C5751E9267F2C8628C5FC28566DE0DF5C3E5294582",
+      "body_sha256": "4D97DBE98177CE7447184E2CEF7A6527425882E323F3278CE6622F24868A37E6",
       "headers": {
         "etag": null,
         "last_modified": "Wed, 28 Oct 2026 20:18:23 GMT"
       },
       "error": null,
-      "body_bytes": 166174
+      "body_bytes": 166350
     },
     {
       "url": "https://www.bls.gov/schedule/news_release/bls.ics",
-      "started_at": "2026-10-28T23:16:13.601Z",
-      "collected_at": "2026-10-28T23:16:14.020Z",
+      "started_at": "2026-10-29T14:22:15.269Z",
+      "collected_at": "2026-10-29T14:22:15.446Z",
       "status": 200,
       "body_sha256": "92A350111ACE106DEAAB5584E4084366BD367B594A0D0BAD116008D82D63E501",
       "headers": {
@@ -54,21 +54,21 @@
     },
     {
       "url": "https://www.bea.gov/news/schedule",
-      "started_at": "2026-10-28T23:16:14.023Z",
-      "collected_at": "2026-10-28T23:16:14.487Z",
+      "started_at": "2026-10-29T14:22:15.449Z",
+      "collected_at": "2026-10-29T14:22:15.771Z",
       "status": 200,
-      "body_sha256": "A6ACF1FEBE79E97EE701EE23D04D28AC0709D998F95311F3304A741B9493E149",
+      "body_sha256": "9C7BB73388629E1728F939001B1A00CBDFF4EF0599DA8AD4894A11B57D6796D4",
       "headers": {
-        "etag": "\"1793217615\"",
-        "last_modified": "Wed, 28 Oct 2026 20:00:15 GMT"
+        "etag": "\"1793277400\"",
+        "last_modified": "Thu, 29 Oct 2026 12:36:40 GMT"
       },
       "error": null,
-      "body_bytes": 71485
+      "body_bytes": 70026
     },
     {
       "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-      "started_at": "2026-10-28T23:16:14.491Z",
-      "collected_at": "2026-10-28T23:16:14.508Z",
+      "started_at": "2026-10-29T14:22:15.776Z",
+      "collected_at": "2026-10-29T14:22:15.897Z",
       "status": 200,
       "body_sha256": "BB86B1BB2616027B0B1751699574F1B1F2D708B3505A84207310CF9EF3920F0B",
       "headers": {
@@ -80,16 +80,16 @@
     },
     {
       "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "started_at": "2026-10-28T23:16:14.508Z",
-      "collected_at": "2026-10-28T23:16:14.617Z",
+      "started_at": "2026-10-29T14:22:15.897Z",
+      "collected_at": "2026-10-29T14:22:16.008Z",
       "status": 200,
-      "body_sha256": "5D739F67DE17129EA9C09ECE32702E5F21245111BDA534DAA9FD0FC85CEBD405",
+      "body_sha256": "B20119067CFFD2CE4AEAC555F15C18EE5EA33830DF53570DA7340C1030F4D53A",
       "headers": {
         "etag": null,
         "last_modified": "Wed, 14 Oct 2026 18:55:11 GMT"
       },
       "error": null,
-      "body_bytes": 106758
+      "body_bytes": 106934
     }
   ],
   "coverage": {
@@ -98,6 +98,6 @@
     "until_day": "2026-11-01",
     "timezone": "America/New_York"
   },
-  "calendar_sha256": "651AEAA7307E660D4C03EAAA9E31B61C71E2C27C0DF5532C508A52AB53E3EF58",
-  "snapshot_sha256": "44C5B25D108F6B310EBC2FA09282B5C7C33CBF1338D5CD2663A8C46DE169B00A"
+  "calendar_sha256": "112837C1AC0AA4BE0EB37F66B53E7A0BCD7F64A8475663AEE9EC546E32001F12",
+  "snapshot_sha256": "07D168B663C2CCE9FE867C33B8731E2936CEE4B3701C85EC1C64CDBB54CA3E81"
 }
