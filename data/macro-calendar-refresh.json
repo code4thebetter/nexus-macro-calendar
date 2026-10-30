@@ -1,12 +1,12 @@
 {
   "schema": "NEXUS_MACRO_CALENDAR_REFRESH_1",
   "status": "SUCCESS",
-  "started_at": "2026-10-30T14:11:12.823Z",
-  "completed_at": "2026-10-30T14:11:14.148Z",
+  "started_at": "2026-10-30T22:59:39.080Z",
+  "completed_at": "2026-10-30T22:59:39.919Z",
   "run": {
-    "id": "41069608321",
+    "id": "41141658962",
     "attempt": "1",
-    "source_commit": "f9c62f34444254dff8c00e82986c1e2834f6e7c3"
+    "source_commit": "80ad480b68660bcef18e581ff478ccb4cd3a6da0"
   },
   "scope_day": "2026-10-30",
   "timezone": "America/New_York",
@@ -28,10 +28,10 @@
   "source_checks": [
     {
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-      "started_at": "2026-10-30T14:11:12.839Z",
-      "collected_at": "2026-10-30T14:11:13.060Z",
+      "started_at": "2026-10-30T22:59:39.091Z",
+      "collected_at": "2026-10-30T22:59:39.241Z",
       "status": 200,
-      "body_sha256": "F6288522316AC3BDBD83B4314933940BE8FC501CE59AED123B389D282B7B11C8",
+      "body_sha256": "48F35642E8109A113507CB038733174ED7C24788FE12CACA2C4E6610AEE6A01E",
       "headers": {
         "etag": null,
         "last_modified": "Wed, 28 Oct 2026 20:18:23 GMT"
@@ -41,8 +41,8 @@
     },
     {
       "url": "https://www.bls.gov/schedule/news_release/bls.ics",
-      "started_at": "2026-10-30T14:11:13.073Z",
-      "collected_at": "2026-10-30T14:11:13.317Z",
+      "started_at": "2026-10-30T22:59:39.249Z",
+      "collected_at": "2026-10-30T22:59:39.370Z",
       "status": 200,
       "body_sha256": "92A350111ACE106DEAAB5584E4084366BD367B594A0D0BAD116008D82D63E501",
       "headers": {
@@ -54,23 +54,23 @@
     },
     {
       "url": "https://www.bea.gov/news/schedule",
-      "started_at": "2026-10-30T14:11:13.321Z",
-      "collected_at": "2026-10-30T14:11:13.748Z",
+      "started_at": "2026-10-30T22:59:39.372Z",
+      "collected_at": "2026-10-30T22:59:39.690Z",
       "status": 200,
-      "body_sha256": "BBD84138B243A0AD483A3BE386A180173DD99CFE381ACBC0A304445A1E806323",
+      "body_sha256": "61D0800B90E2ACA4D73FDEEDABBD2D1181399B5222FEA068022F5132CD9D0B63",
       "headers": {
-        "etag": "\"1793361619\"",
-        "last_modified": "Fri, 30 Oct 2026 12:00:19 GMT"
+        "etag": "\"1793390407\"",
+        "last_modified": "Fri, 30 Oct 2026 20:00:07 GMT"
       },
       "error": null,
       "body_bytes": 70026
     },
     {
       "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-      "started_at": "2026-10-30T14:11:13.752Z",
-      "collected_at": "2026-10-30T14:11:14.014Z",
+      "started_at": "2026-10-30T22:59:39.693Z",
+      "collected_at": "2026-10-30T22:59:39.798Z",
       "status": 200,
-      "body_sha256": "437D9443E2F3D6AF874CA0C0018374FC573941CA04EE3390B7E71268DA6E70F7",
+      "body_sha256": "BB86B1BB2616027B0B1751699574F1B1F2D708B3505A84207310CF9EF3920F0B",
       "headers": {
         "etag": null,
         "last_modified": null
@@ -80,10 +80,10 @@
     },
     {
       "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "started_at": "2026-10-30T14:11:14.014Z",
-      "collected_at": "2026-10-30T14:11:14.146Z",
+      "started_at": "2026-10-30T22:59:39.799Z",
+      "collected_at": "2026-10-30T22:59:39.917Z",
       "status": 200,
-      "body_sha256": "0DC7E3EF589C2046E7B31E1356EE06E0500AA7D0FED70E6D936179D489B094FD",
+      "body_sha256": "ABFBD202F2526A7EA50A93498156ED50A6EE65F888F03286B09B29861D80E55C",
       "headers": {
         "etag": null,
         "last_modified": "Wed, 14 Oct 2026 18:55:11 GMT"
@@ -99,5 +99,5 @@
     "timezone": "America/New_York"
   },
   "calendar_sha256": "112837C1AC0AA4BE0EB37F66B53E7A0BCD7F64A8475663AEE9EC546E32001F12",
-  "snapshot_sha256": "222D08686D782AD5066696AED3549AE565A7E8AAC5D9345FD3F8BB97CA3D10AF"
+  "snapshot_sha256": "E16365C93CFA0F42B22594AE1EBCAB5371967A89943E962D3C0CE86511AF9A19"
 }
