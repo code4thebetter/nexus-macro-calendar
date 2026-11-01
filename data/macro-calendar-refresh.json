@@ -1,14 +1,14 @@
 {
   "schema": "NEXUS_MACRO_CALENDAR_REFRESH_1",
   "status": "SUCCESS",
-  "started_at": "2026-10-31T22:30:31.911Z",
-  "completed_at": "2026-10-31T22:30:32.265Z",
+  "started_at": "2026-11-01T14:17:33.044Z",
+  "completed_at": "2026-11-01T14:17:33.864Z",
   "run": {
-    "id": "41248477685",
+    "id": "41315449601",
     "attempt": "1",
-    "source_commit": "82bf739f29c161bee8ec78d2a535108261574a74"
+    "source_commit": "0447b409c648791e9306e58086878b6f0d660795"
   },
-  "scope_day": "2026-10-31",
+  "scope_day": "2026-11-01",
   "timezone": "America/New_York",
   "sources": {
     "FED": {
@@ -28,10 +28,10 @@
   "source_checks": [
     {
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-      "started_at": "2026-10-31T22:30:31.927Z",
-      "collected_at": "2026-10-31T22:30:32.069Z",
+      "started_at": "2026-11-01T14:17:33.059Z",
+      "collected_at": "2026-11-01T14:17:33.249Z",
       "status": 200,
-      "body_sha256": "35CF9295322BC959A612D9D995BC4160CBB668C2A7D5C8DC1D3640E148E9010C",
+      "body_sha256": "68E4AE2FB48BE376C8308308258FF848E8ACACA276447EC669DA8804114AB8D4",
       "headers": {
         "etag": null,
         "last_modified": "Wed, 28 Oct 2026 20:18:23 GMT"
@@ -41,8 +41,8 @@
     },
     {
       "url": "https://www.bls.gov/schedule/news_release/bls.ics",
-      "started_at": "2026-10-31T22:30:32.080Z",
-      "collected_at": "2026-10-31T22:30:32.131Z",
+      "started_at": "2026-11-01T14:17:33.261Z",
+      "collected_at": "2026-11-01T14:17:33.442Z",
       "status": 200,
       "body_sha256": "92A350111ACE106DEAAB5584E4084366BD367B594A0D0BAD116008D82D63E501",
       "headers": {
@@ -54,50 +54,50 @@
     },
     {
       "url": "https://www.bea.gov/news/schedule",
-      "started_at": "2026-10-31T22:30:32.134Z",
-      "collected_at": "2026-10-31T22:30:32.216Z",
+      "started_at": "2026-11-01T14:17:33.445Z",
+      "collected_at": "2026-11-01T14:17:33.673Z",
       "status": 200,
-      "body_sha256": "EBF6029AC56DFE45360A56AFD5963DDC72A4E9A579CCA1D5FD1C4B54DB1F1D91",
+      "body_sha256": "365E5475E7D10BCBFBCBA625B4FCF549AA6C01FBE390433D440F9586E7D46C78",
       "headers": {
-        "etag": "\"1793476817\"",
-        "last_modified": "Sat, 31 Oct 2026 20:00:17 GMT"
+        "etag": "\"1793538008\"",
+        "last_modified": "Sun, 01 Nov 2026 13:00:08 GMT"
       },
       "error": null,
-      "body_bytes": 70026
+      "body_bytes": 70025
     },
     {
-      "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-      "started_at": "2026-10-31T22:30:32.219Z",
-      "collected_at": "2026-10-31T22:30:32.238Z",
+      "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "started_at": "2026-11-01T14:17:33.677Z",
+      "collected_at": "2026-11-01T14:17:33.767Z",
       "status": 200,
-      "body_sha256": "BB86B1BB2616027B0B1751699574F1B1F2D708B3505A84207310CF9EF3920F0B",
+      "body_sha256": "67A8AE3CAC39E5F4E2E1D4C9AE38C097EBEE716DCA30048C46BE33213C5A8B4B",
       "headers": {
         "etag": null,
         "last_modified": null
       },
       "error": null,
-      "body_bytes": 57158
+      "body_bytes": 56844
     },
     {
-      "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "started_at": "2026-10-31T22:30:32.238Z",
-      "collected_at": "2026-10-31T22:30:32.263Z",
+      "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+      "started_at": "2026-11-01T14:17:33.768Z",
+      "collected_at": "2026-11-01T14:17:33.862Z",
       "status": 200,
-      "body_sha256": "89758223ED415914104BBD09DB168F21AE635AFA13C5268F7E934681BD2096F6",
+      "body_sha256": "B02E8B4ECA6C4E789E2ADCE263137C35EC18CEFD7083327E0256E5C2C1243B73",
       "headers": {
         "etag": null,
-        "last_modified": "Wed, 14 Oct 2026 18:55:11 GMT"
+        "last_modified": "Thu, 29 Oct 2026 20:30:13 GMT"
       },
       "error": null,
-      "body_bytes": 106934
+      "body_bytes": 94636
     }
   ],
   "coverage": {
     "kind": "OFFICIAL_MONTHLY_SCOPE_PENDING_CONSUMER_VALIDATION",
-    "from_day": "2026-10-01",
-    "until_day": "2026-11-01",
+    "from_day": "2026-11-01",
+    "until_day": "2026-12-01",
     "timezone": "America/New_York"
   },
   "calendar_sha256": "112837C1AC0AA4BE0EB37F66B53E7A0BCD7F64A8475663AEE9EC546E32001F12",
-  "snapshot_sha256": "4F92F152B5E9DFF16D467B30375C7516A71F94899A1BB123AFCECB075FCE7AE0"
+  "snapshot_sha256": "693503F0123A29938328715E99EF16D64FCA718D1AF08CCDD7B557887CB48415"
 }
