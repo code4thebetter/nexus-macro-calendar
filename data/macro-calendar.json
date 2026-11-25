@@ -952,22 +952,6 @@
     "severity": "MEDIUM"
   },
   {
-    "id": "BEA-GDP-SECOND-ESTIMATE-2026-11-25",
-    "date": "2026-11-25",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "GDP Second Estimate",
-    "severity": "MEDIUM"
-  },
-  {
-    "id": "BEA-PERSONAL-INCOME-AND-OUTLAYS-2026-11-25",
-    "date": "2026-11-25",
-    "timeET": "08:30",
-    "source": "BEA",
-    "event": "Personal Income and Outlays",
-    "severity": "HIGH"
-  },
-  {
     "id": "BLS-JOB-OPENINGS-AND-LABOR-TURNOVER-SURVEY-2026-12-01",
     "date": "2026-12-01",
     "timeET": "10:00",
